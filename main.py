@@ -1,8 +1,5 @@
-# This is a sample Python script.
 
-# Press F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+from wheel.wheel import Wheel
 
 def run():
     # Get the degenerate gambler's name.
@@ -10,6 +7,14 @@ def run():
 
     # Welcome them to the roulette wheel simulator.
     print(f'Welcome to the roulette wheel simulator, {name}')
+
+    # Create a wheel.
+    roulette_wheel = Wheel()
+
+    # Run the wheel.
+    result = roulette_wheel.random_spin()
+    print(result.color)
+    print(result.number)
 
     # Exit
     print("Have a good day!")
