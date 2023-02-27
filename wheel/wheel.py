@@ -49,12 +49,15 @@ class Wheel:
         for i in self.red_slots:
             i.color = Color.Red
 
-        for i in list( range( 2, self.wheel_size, 2 ) ) :
+        for i in list( range( 0, self.wheel_size, 2 ) ) :
             self.black_slots.append( Slot( Color.Black, i ) )
 
         # TODO: find a better way to do this
         for i in self.black_slots:
             i.color = Color.Black
+
+        self.black_slots[0].color = Color.Green
+        self.red_slots[-1].color = Color.Green
 
         self.slots = self.black_slots + self.red_slots + self.green_slots
 
